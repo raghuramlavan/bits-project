@@ -18,7 +18,7 @@ print(m)
 # the maximum value cam as 294.49 
 
 # uncomment to use the saved model
-model = keras.models.load_model('ai_detector.keras')
+model = keras.models.load_model('ai_detector.keras-2')
 
 
 #model building

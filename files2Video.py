@@ -14,13 +14,15 @@ def our_thres(img):
     return cv2.adaptiveThreshold(img,1,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY_INV,15,3)
 
 
+image_folder = "/home/lavan/conservation_drones_train_real/TrainReal/images/0000000010_0000000000"
+#image_folder =  "/home/lavan/ALL_IN_ONE_RGB_IMG_ANOT"
+video_name = 'orginal_second_dataset.mp4'
 
-image_folder =  "/home/lavan/ALL_IN_ONE_RGB_IMG_ANOT"
-video_name = 'orginal.mp4'
-
-f = [str(i).zfill(3) for i in range(1,1730)]
-
-images = [n+".jpg" for n in f ]
+f = [str(i).zfill(10) for i in range(1,1730)]
+pre = "0000000010_0000000000_"
+#pre=""
+images = [pre+n+".jpg" for n in f ]
+print(images[0])
 frame = cv2.imread(os.path.join(image_folder, images[0]))
 height, width, layers = frame.shape
 
